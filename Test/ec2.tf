@@ -25,7 +25,7 @@ resource "aws_instance" "web"  {
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
   key_name = aws_key_pair.deployer1.key_name
    subnet_id = aws_subnet.subnet1.id  #  subnet_id = aws_subnet.main1.id
-  #  user_data = file("gitlab.sh")
+   user_data = file("gitlab.sh")
   
 }
 

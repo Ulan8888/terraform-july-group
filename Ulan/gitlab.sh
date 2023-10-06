@@ -1,10 +1,10 @@
 #!/bin/bash
- sudo apt update -y
-      sudo  amazon-linux-extras install docker -y
-      sudo service docker start
-      sudo usermod -a -G docker ec2-user
-      sudo chkconfig docker on
-      sudo yum install -y git
-      sudo chmod 666 /var/run/docker.sock
-      docker pull dhruvin30/dhsoniweb:v1
-      docker run -d -p 80:80 dhruvin30/dhsoniweb:latest 
+
+sudo apt update
+sudo apt install ca-certificates curl openssh-server tzdata perl -y
+curl -LO https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh
+sudo bash script.deb.sh
+sudo apt install gitlab-ce -y
+
+
+####   this is our gitlab file   #########
