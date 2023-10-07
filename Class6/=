@@ -1,0 +1,352 @@
+Script started on 2023-10-07 16:02:02+00:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="98" LINES="16"]
+]0;ec2-user@ip-172-31-33-171:~/terraform-july-group/Class6[?2004h[ec2-user@ip-172-31-33-171 Class6]$ [H[2J[ec2-user@ip-172-31-33-171 Class6]$ terraform destroy -var-file california.tfvars [2Pappl[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@destro[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kpacker init .
+[?2004l]0;ec2-user@ip-172-31-33-171:~/terraform-july-group/Class6[?2004h[ec2-user@ip-172-31-33-171 Class6]$ packer build .
+[?2004l[1;32mlearn-packer.amazon-ebs.example: output will be in this color.[0m
+
+[1;32m==> learn-packer.amazon-ebs.example: Prevalidating any provided VPC information[0m
+[1;32m==> learn-packer.amazon-ebs.example: Prevalidating AMI Name: learn-packer-linux-aws[0m
+[0;32m    learn-packer.amazon-ebs.example: Found Image ID: ami-067d1e60475437da2[0m
+[1;32m==> learn-packer.amazon-ebs.example: Using existing SSH private key[0m
+[1;32m==> learn-packer.amazon-ebs.example: Creating temporary security group for this instance: packer_65218112-085c-c12f-aa2d-aca07c7cd276[0m
+[1;32m==> learn-packer.amazon-ebs.example: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...[0m
+[1;32m==> learn-packer.amazon-ebs.example: Launching a source AWS instance...[0m
+[0;32m    learn-packer.amazon-ebs.example: Adding tag: "Name": "Golden Image"[0m
+[0;32m    learn-packer.amazon-ebs.example: Instance ID: i-066c0e04c45f459bf[0m
+[1;32m==> learn-packer.amazon-ebs.example: Waiting for instance (i-066c0e04c45f459bf) to become ready...[0m
+[1;32m==> learn-packer.amazon-ebs.example: Using SSH communicator to connect: 3.86.70.75[0m
+[1;32m==> learn-packer.amazon-ebs.example: Waiting for SSH to become available...[0m
+[1;32m==> learn-packer.amazon-ebs.example: Connected to SSH![0m
+[1;32m==> learn-packer.amazon-ebs.example: Provisioning with shell script: setup.sh[0m
+[0;32m    learn-packer.amazon-ebs.example: Amazon Linux 2023 repository                     25 MB/s |  20 MB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: Amazon Linux 2023 Kernel Livepatch repository   509 kB/s | 160 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: Dependencies resolved.[0m
+[0;32m    learn-packer.amazon-ebs.example: ================================================================================[0m
+[0;32m    learn-packer.amazon-ebs.example:  Package               Arch     Version                     Repository     Size[0m
+[0;32m    learn-packer.amazon-ebs.example: ================================================================================[0m
+[0;32m    learn-packer.amazon-ebs.example: Installing:[0m
+[0;32m    learn-packer.amazon-ebs.example:  httpd                 x86_64   2.4.56-1.amzn2023           amazonlinux    48 k[0m
+[0;32m    learn-packer.amazon-ebs.example: Installing dependencies:[0m
+[0;32m    learn-packer.amazon-ebs.example:  apr                   x86_64   1.7.2-2.amzn2023.0.2        amazonlinux   129 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  apr-util              x86_64   1.6.3-1.amzn2023.0.1        amazonlinux    98 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  generic-logos-httpd   noarch   18.0.0-12.amzn2023.0.3      amazonlinux    19 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  httpd-core            x86_64   2.4.56-1.amzn2023           amazonlinux   1.4 M[0m
+[0;32m    learn-packer.amazon-ebs.example:  httpd-filesystem      noarch   2.4.56-1.amzn2023           amazonlinux    15 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  httpd-tools           x86_64   2.4.56-1.amzn2023           amazonlinux    82 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  libbrotli             x86_64   1.0.9-4.amzn2023.0.2        amazonlinux   315 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  mailcap               noarch   2.1.49-3.amzn2023.0.3       amazonlinux    33 k[0m
+[0;32m    learn-packer.amazon-ebs.example: Installing weak dependencies:[0m
+[0;32m    learn-packer.amazon-ebs.example:  apr-util-openssl      x86_64   1.6.3-1.amzn2023.0.1        amazonlinux    17 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  mod_http2             x86_64   2.0.11-2.amzn2023           amazonlinux   150 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  mod_lua               x86_64   2.4.56-1.amzn2023           amazonlinux    62 k[0m
+[0;32m    learn-packer.amazon-ebs.example:[0m
+[0;32m    learn-packer.amazon-ebs.example: Transaction Summary[0m
+[0;32m    learn-packer.amazon-ebs.example: ================================================================================[0m
+[0;32m    learn-packer.amazon-ebs.example: Install  12 Packages[0m
+[0;32m    learn-packer.amazon-ebs.example:[0m
+[0;32m    learn-packer.amazon-ebs.example: Total download size: 2.3 M[0m
+[0;32m    learn-packer.amazon-ebs.example: Installed size: 6.9 M[0m
+[0;32m    learn-packer.amazon-ebs.example: Downloading Packages:[0m
+[0;32m    learn-packer.amazon-ebs.example: (1/12): mod_lua-2.4.56-1.amzn2023.x86_64.rpm    496 kB/s |  62 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (2/12): httpd-2.4.56-1.amzn2023.x86_64.rpm      355 kB/s |  48 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (3/12): apr-util-1.6.3-1.amzn2023.0.1.x86_64.rp 3.1 MB/s |  98 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (4/12): libbrotli-1.0.9-4.amzn2023.0.2.x86_64.r 6.4 MB/s | 315 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (5/12): apr-1.7.2-2.amzn2023.0.2.x86_64.rpm     4.3 MB/s | 129 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (6/12): httpd-tools-2.4.56-1.amzn2023.x86_64.rp 4.2 MB/s |  82 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (7/12): apr-util-openssl-1.6.3-1.amzn2023.0.1.x  66 kB/s |  17 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (8/12): httpd-core-2.4.56-1.amzn2023.x86_64.rpm  19 MB/s | 1.4 MB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (9/12): httpd-filesystem-2.4.56-1.amzn2023.noar 545 kB/s |  15 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (10/12): mailcap-2.1.49-3.amzn2023.0.3.noarch.r 2.0 MB/s |  33 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (11/12): generic-logos-httpd-18.0.0-12.amzn2023 1.1 MB/s |  19 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (12/12): mod_http2-2.0.11-2.amzn2023.x86_64.rpm 1.0 MB/s | 150 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: --------------------------------------------------------------------------------[0m
+[0;32m    learn-packer.amazon-ebs.example: Total                                           5.3 MB/s | 2.3 MB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: Running transaction check[0m
+[0;32m    learn-packer.amazon-ebs.example: Transaction check succeeded.[0m
+[0;32m    learn-packer.amazon-ebs.example: Running transaction test[0m
+[0;32m    learn-packer.amazon-ebs.example: Transaction test succeeded.[0m
+[0;32m    learn-packer.amazon-ebs.example: Running transaction[0m
+[0;32m    learn-packer.amazon-ebs.example:   Preparing        :                                                        1/1[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : apr-1.7.2-2.amzn2023.0.2.x86_64                       1/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : apr-util-1.6.3-1.amzn2023.0.1.x86_64                  2/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64          3/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : mailcap-2.1.49-3.amzn2023.0.3.noarch                  4/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : httpd-tools-2.4.56-1.amzn2023.x86_64                  5/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch     6/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Running scriptlet: httpd-filesystem-2.4.56-1.amzn2023.noarch             7/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : httpd-filesystem-2.4.56-1.amzn2023.noarch             7/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : httpd-core-2.4.56-1.amzn2023.x86_64                   8/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : mod_lua-2.4.56-1.amzn2023.x86_64                      9/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : mod_http2-2.0.11-2.amzn2023.x86_64                   10/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                11/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : httpd-2.4.56-1.amzn2023.x86_64                       12/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Running scriptlet: httpd-2.4.56-1.amzn2023.x86_64                       12/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : httpd-2.4.56-1.amzn2023.x86_64                        1/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64          2/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : mod_lua-2.4.56-1.amzn2023.x86_64                      3/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : apr-util-1.6.3-1.amzn2023.0.1.x86_64                  4/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                 5/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : apr-1.7.2-2.amzn2023.0.2.x86_64                       6/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : mod_http2-2.0.11-2.amzn2023.x86_64                    7/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : httpd-tools-2.4.56-1.amzn2023.x86_64                  8/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : httpd-core-2.4.56-1.amzn2023.x86_64                   9/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : httpd-filesystem-2.4.56-1.amzn2023.noarch            10/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : mailcap-2.1.49-3.amzn2023.0.3.noarch                 11/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch    12/12[0m
+[0;32m    learn-packer.amazon-ebs.example:[0m
+[0;32m    learn-packer.amazon-ebs.example: Installed:[0m
+[0;32m    learn-packer.amazon-ebs.example:   apr-1.7.2-2.amzn2023.0.2.x86_64[0m
+[0;32m    learn-packer.amazon-ebs.example:   apr-util-1.6.3-1.amzn2023.0.1.x86_64[0m
+[0;32m    learn-packer.amazon-ebs.example:   apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64[0m
+[0;32m    learn-packer.amazon-ebs.example:   generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch[0m
+[0;32m    learn-packer.amazon-ebs.example:   httpd-2.4.56-1.amzn2023.x86_64[0m
+[0;32m    learn-packer.amazon-ebs.example:   httpd-core-2.4.56-1.amzn2023.x86_64[0m
+[0;32m    learn-packer.amazon-ebs.example:   httpd-filesystem-2.4.56-1.amzn2023.noarch[0m
+[0;32m    learn-packer.amazon-ebs.example:   httpd-tools-2.4.56-1.amzn2023.x86_64[0m
+[0;32m    learn-packer.amazon-ebs.example:   libbrotli-1.0.9-4.amzn2023.0.2.x86_64[0m
+[0;32m    learn-packer.amazon-ebs.example:   mailcap-2.1.49-3.amzn2023.0.3.noarch[0m
+[0;32m    learn-packer.amazon-ebs.example:   mod_http2-2.0.11-2.amzn2023.x86_64[0m
+[0;32m    learn-packer.amazon-ebs.example:   mod_lua-2.4.56-1.amzn2023.x86_64[0m
+[0;32m    learn-packer.amazon-ebs.example:[0m
+[0;32m    learn-packer.amazon-ebs.example: Complete![0m
+[1;31m==> learn-packer.amazon-ebs.example: Created symlink /etc/systemd/system/multi-user.target.wants/httpd.service → /usr/lib/systemd/system/httpd.service.[0m
+[1;32m==> learn-packer.amazon-ebs.example: Pausing at breakpoint provisioner with note "Please verify".[0m
+[1;32m==> learn-packer.amazon-ebs.example: Press enter to continue.[0m 
+[1;32m==> learn-packer.amazon-ebs.example: Stopping the source instance...[0m
+[0;32m    learn-packer.amazon-ebs.example: Stopping instance[0m
+[1;32m==> learn-packer.amazon-ebs.example: Waiting for the instance to stop...[0m
+[1;32m==> learn-packer.amazon-ebs.example: Creating AMI learn-packer-linux-aws from instance i-066c0e04c45f459bf[0m
+[0;32m    learn-packer.amazon-ebs.example: AMI: ami-0c78c283658bb0e15[0m
+[1;32m==> learn-packer.amazon-ebs.example: Waiting for AMI to become ready...[0m
+[1;32m==> learn-packer.amazon-ebs.example: Skipping Enable AMI deprecation...[0m
+[1;32m==> learn-packer.amazon-ebs.example: Terminating the source AWS instance...[0m
+[1;32m==> learn-packer.amazon-ebs.example: Cleaning up any extra volumes...[0m
+[1;32m==> learn-packer.amazon-ebs.example: No volumes to clean up, skipping[0m
+[1;32m==> learn-packer.amazon-ebs.example: Deleting temporary security group...[0m
+[1;32mBuild 'learn-packer.amazon-ebs.example' finished after 4 minutes 34 seconds.[0m
+
+==> Wait completed after 4 minutes 34 seconds
+
+==> Builds finished. The artifacts of successful builds are:
+--> learn-packer.amazon-ebs.example: AMIs were created:
+us-east-1: ami-0c78c283658bb0e15
+
+]0;ec2-user@ip-172-31-33-171:~/terraform-july-group/Class6[?2004h[ec2-user@ip-172-31-33-171 Class6]$ [H[2J[ec2-user@ip-172-31-33-171 Class6]$ packer build .
+[?2004l[1;32mlearn-packer.amazon-ebs.example: output will be in this color.[0m
+
+[1;32m==> learn-packer.amazon-ebs.example: Prevalidating any provided VPC information[0m
+[1;32m==> learn-packer.amazon-ebs.example: Prevalidating AMI Name: kaizen 1696695096[0m
+[0;32m    learn-packer.amazon-ebs.example: Found Image ID: ami-067d1e60475437da2[0m
+[1;32m==> learn-packer.amazon-ebs.example: Using existing SSH private key[0m
+[1;32m==> learn-packer.amazon-ebs.example: Creating temporary security group for this instance: packer_65218339-b740-22b5-a62b-60f7369aed2e[0m
+[1;32m==> learn-packer.amazon-ebs.example: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...[0m
+[1;32m==> learn-packer.amazon-ebs.example: Launching a source AWS instance...[0m
+[0;32m    learn-packer.amazon-ebs.example: Adding tag: "Name": "Golden Image"[0m
+[0;32m    learn-packer.amazon-ebs.example: Instance ID: i-06b9b484a19741579[0m
+[1;32m==> learn-packer.amazon-ebs.example: Waiting for instance (i-06b9b484a19741579) to become ready...[0m
+[1;32m==> learn-packer.amazon-ebs.example: Using SSH communicator to connect: 54.209.63.224[0m
+[1;32m==> learn-packer.amazon-ebs.example: Waiting for SSH to become available...[0m
+[1;32m==> learn-packer.amazon-ebs.example: Connected to SSH![0m
+[1;32m==> learn-packer.amazon-ebs.example: Provisioning with shell script: setup.sh[0m
+[0;32m    learn-packer.amazon-ebs.example: Amazon Linux 2023 repository                     26 MB/s |  20 MB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: Amazon Linux 2023 Kernel Livepatch repository   541 kB/s | 160 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: Dependencies resolved.[0m
+[0;32m    learn-packer.amazon-ebs.example: ================================================================================[0m
+[0;32m    learn-packer.amazon-ebs.example:  Package               Arch     Version                     Repository     Size[0m
+[0;32m    learn-packer.amazon-ebs.example: ================================================================================[0m
+[0;32m    learn-packer.amazon-ebs.example: Installing:[0m
+[0;32m    learn-packer.amazon-ebs.example:  httpd                 x86_64   2.4.56-1.amzn2023           amazonlinux    48 k[0m
+[0;32m    learn-packer.amazon-ebs.example: Installing dependencies:[0m
+[0;32m    learn-packer.amazon-ebs.example:  apr                   x86_64   1.7.2-2.amzn2023.0.2        amazonlinux   129 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  apr-util              x86_64   1.6.3-1.amzn2023.0.1        amazonlinux    98 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  generic-logos-httpd   noarch   18.0.0-12.amzn2023.0.3      amazonlinux    19 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  httpd-core            x86_64   2.4.56-1.amzn2023           amazonlinux   1.4 M[0m
+[0;32m    learn-packer.amazon-ebs.example:  httpd-filesystem      noarch   2.4.56-1.amzn2023           amazonlinux    15 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  httpd-tools           x86_64   2.4.56-1.amzn2023           amazonlinux    82 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  libbrotli             x86_64   1.0.9-4.amzn2023.0.2        amazonlinux   315 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  mailcap               noarch   2.1.49-3.amzn2023.0.3       amazonlinux    33 k[0m
+[0;32m    learn-packer.amazon-ebs.example: Installing weak dependencies:[0m
+[0;32m    learn-packer.amazon-ebs.example:  apr-util-openssl      x86_64   1.6.3-1.amzn2023.0.1        amazonlinux    17 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  mod_http2             x86_64   2.0.11-2.amzn2023           amazonlinux   150 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  mod_lua               x86_64   2.4.56-1.amzn2023           amazonlinux    62 k[0m
+[0;32m    learn-packer.amazon-ebs.example:[0m
+[0;32m    learn-packer.amazon-ebs.example: Transaction Summary[0m
+[0;32m    learn-packer.amazon-ebs.example: ================================================================================[0m
+[0;32m    learn-packer.amazon-ebs.example: Install  12 Packages[0m
+[0;32m    learn-packer.amazon-ebs.example:[0m
+[0;32m    learn-packer.amazon-ebs.example: Total download size: 2.3 M[0m
+[0;32m    learn-packer.amazon-ebs.example: Installed size: 6.9 M[0m
+[0;32m    learn-packer.amazon-ebs.example: Downloading Packages:[0m
+[0;32m    learn-packer.amazon-ebs.example: (1/12): apr-util-openssl-1.6.3-1.amzn2023.0.1.x 159 kB/s |  17 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (2/12): httpd-2.4.56-1.amzn2023.x86_64.rpm      437 kB/s |  48 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (3/12): mod_lua-2.4.56-1.amzn2023.x86_64.rpm    542 kB/s |  62 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (4/12): apr-util-1.6.3-1.amzn2023.0.1.x86_64.rp 3.3 MB/s |  98 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (5/12): apr-1.7.2-2.amzn2023.0.2.x86_64.rpm     3.7 MB/s | 129 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (6/12): mod_http2-2.0.11-2.amzn2023.x86_64.rpm  7.0 MB/s | 150 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (7/12): libbrotli-1.0.9-4.amzn2023.0.2.x86_64.r 5.2 MB/s | 315 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (8/12): httpd-tools-2.4.56-1.amzn2023.x86_64.rp 2.0 MB/s |  82 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (9/12): httpd-filesystem-2.4.56-1.amzn2023.noar 573 kB/s |  15 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (10/12): mailcap-2.1.49-3.amzn2023.0.3.noarch.r 2.5 MB/s |  33 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (11/12): httpd-core-2.4.56-1.amzn2023.x86_64.rp  17 MB/s | 1.4 MB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (12/12): generic-logos-httpd-18.0.0-12.amzn2023 417 kB/s |  19 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: --------------------------------------------------------------------------------[0m
+[0;32m    learn-packer.amazon-ebs.example: Total                                           6.5 MB/s | 2.3 MB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: Running transaction check[0m
+[0;32m    learn-packer.amazon-ebs.example: Transaction check succeeded.[0m
+[0;32m    learn-packer.amazon-ebs.example: Running transaction test[0m
+[0;32m    learn-packer.amazon-ebs.example: Transaction test succeeded.[0m
+[0;32m    learn-packer.amazon-ebs.example: Running transaction[0m
+[0;32m    learn-packer.amazon-ebs.example:   Preparing        :                                                        1/1[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : apr-1.7.2-2.amzn2023.0.2.x86_64                       1/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : apr-util-1.6.3-1.amzn2023.0.1.x86_64                  2/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64          3/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : mailcap-2.1.49-3.amzn2023.0.3.noarch                  4/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : httpd-tools-2.4.56-1.amzn2023.x86_64                  5/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch     6/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Running scriptlet: httpd-filesystem-2.4.56-1.amzn2023.noarch             7/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : httpd-filesystem-2.4.56-1.amzn2023.noarch             7/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : httpd-core-2.4.56-1.amzn2023.x86_64                   8/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : mod_lua-2.4.56-1.amzn2023.x86_64                      9/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : mod_http2-2.0.11-2.amzn2023.x86_64                   10/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                11/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : httpd-2.4.56-1.amzn2023.x86_64                       12/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Running scriptlet: httpd-2.4.56-1.amzn2023.x86_64                       12/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : httpd-2.4.56-1.amzn2023.x86_64                        1/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64          2/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : mod_lua-2.4.56-1.amzn2023.x86_64                      3/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : apr-util-1.6.3-1.amzn2023.0.1.x86_64                  4/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                 5/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : apr-1.7.2-2.amzn2023.0.2.x86_64                       6/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : mod_http2-2.0.11-2.amzn2023.x86_64                    7/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : httpd-tools-2.4.56-1.amzn2023.x86_64                  8/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : httpd-core-2.4.56-1.amzn2023.x86_64                   9/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : httpd-filesystem-2.4.56-1.amzn2023.noarch            10/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : mailcap-2.1.49-3.amzn2023.0.3.noarch                 11/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch    12/12[0m
+[0;32m    learn-packer.amazon-ebs.example:[0m
+[0;32m    learn-packer.amazon-ebs.example: Installed:[0m
+[0;32m    learn-packer.amazon-ebs.example:   apr-1.7.2-2.amzn2023.0.2.x86_64[0m
+[0;32m    learn-packer.amazon-ebs.example:   apr-util-1.6.3-1.amzn2023.0.1.x86_64[0m
+[0;32m    learn-packer.amazon-ebs.example:   apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64[0m
+[0;32m    learn-packer.amazon-ebs.example:   generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch[0m
+[0;32m    learn-packer.amazon-ebs.example:   httpd-2.4.56-1.amzn2023.x86_64[0m
+[0;32m    learn-packer.amazon-ebs.example:   httpd-core-2.4.56-1.amzn2023.x86_64[0m
+[0;32m    learn-packer.amazon-ebs.example:   httpd-filesystem-2.4.56-1.amzn2023.noarch[0m
+[0;32m    learn-packer.amazon-ebs.example:   httpd-tools-2.4.56-1.amzn2023.x86_64[0m
+[0;32m    learn-packer.amazon-ebs.example:   libbrotli-1.0.9-4.amzn2023.0.2.x86_64[0m
+[0;32m    learn-packer.amazon-ebs.example:   mailcap-2.1.49-3.amzn2023.0.3.noarch[0m
+[0;32m    learn-packer.amazon-ebs.example:   mod_http2-2.0.11-2.amzn2023.x86_64[0m
+[0;32m    learn-packer.amazon-ebs.example:   mod_lua-2.4.56-1.amzn2023.x86_64[0m
+[0;32m    learn-packer.amazon-ebs.example:[0m
+[0;32m    learn-packer.amazon-ebs.example: Complete![0m
+[1;31m==> learn-packer.amazon-ebs.example: Created symlink /etc/systemd/system/multi-user.target.wants/httpd.service → /usr/lib/systemd/system/httpd.service.[0m
+[1;32m==> learn-packer.amazon-ebs.example: Pausing at breakpoint provisioner with note "Please verify".[0m
+[1;32m==> learn-packer.amazon-ebs.example: Press enter to continue.[0m 
+[1;32m==> learn-packer.amazon-ebs.example: Stopping the source instance...[0m
+[0;32m    learn-packer.amazon-ebs.example: Stopping instance[0m
+[1;32m==> learn-packer.amazon-ebs.example: Waiting for the instance to stop...[0m
+[1;32m==> learn-packer.amazon-ebs.example: Creating AMI kaizen 1696695096 from instance i-06b9b484a19741579[0m
+[0;32m    learn-packer.amazon-ebs.example: AMI: ami-08df36a66a37687d1[0m
+[1;32m==> learn-packer.amazon-ebs.example: Waiting for AMI to become ready...[0m
+[1;32m==> learn-packer.amazon-ebs.example: Skipping Enable AMI deprecation...[0m
+[1;32m==> learn-packer.amazon-ebs.example: Terminating the source AWS instance...[0m
+[1;32m==> learn-packer.amazon-ebs.example: Cleaning up any extra volumes...[0m
+[1;32m==> learn-packer.amazon-ebs.example: No volumes to clean up, skipping[0m
+[1;32m==> learn-packer.amazon-ebs.example: Deleting temporary security group...[0m
+[1;32mBuild 'learn-packer.amazon-ebs.example' finished after 3 minutes 40 seconds.[0m
+
+==> Wait completed after 3 minutes 40 seconds
+
+==> Builds finished. The artifacts of successful builds are:
+--> learn-packer.amazon-ebs.example: AMIs were created:
+us-east-1: ami-08df36a66a37687d1
+
+]0;ec2-user@ip-172-31-33-171:~/terraform-july-group/Class6[?2004h[ec2-user@ip-172-31-33-171 Class6]$ [K[ec2-user@ip-172-31-33-171 Class6]$ [H[2J[ec2-user@ip-172-31-33-171 Class6]$ [K[ec2-user@ip-172-31-33-171 Class6]$ [H[2J[ec2-user@ip-172-31-33-171 Class6]$ packer build .
+[?2004l[1;32mlearn-packer.amazon-ebs.example: output will be in this color.[0m
+
+[1;32m==> learn-packer.amazon-ebs.example: Prevalidating any provided VPC information[0m
+[1;32m==> learn-packer.amazon-ebs.example: Prevalidating AMI Name: kaizen 1696696832[0m
+[0;32m    learn-packer.amazon-ebs.example: Found Image ID: ami-067d1e60475437da2[0m
+[1;32m==> learn-packer.amazon-ebs.example: Using existing SSH private key[0m
+[1;32m==> learn-packer.amazon-ebs.example: Creating temporary security group for this instance: packer_65218a01-fe88-3bbe-b14c-993a97a91654[0m
+[1;32m==> learn-packer.amazon-ebs.example: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...[0m
+[1;32m==> learn-packer.amazon-ebs.example: Launching a source AWS instance...[0m
+[0;32m    learn-packer.amazon-ebs.example: Adding tag: "Name": "Golden Image"[0m
+[0;32m    learn-packer.amazon-ebs.example: Instance ID: i-03a638e7850cc8f9c[0m
+[1;32m==> learn-packer.amazon-ebs.example: Waiting for instance (i-03a638e7850cc8f9c) to become ready...[0m
+[1;32m==> learn-packer.amazon-ebs.example: Using SSH communicator to connect: 54.162.19.86[0m
+[1;32m==> learn-packer.amazon-ebs.example: Waiting for SSH to become available...[0m
+[1;32m==> learn-packer.amazon-ebs.example: Connected to SSH![0m
+[1;32m==> learn-packer.amazon-ebs.example: Provisioning with shell script: setup.sh[0m
+[0;32m    learn-packer.amazon-ebs.example: Waiting for process with pid 2262 to finish.[0m
+[0;32m    learn-packer.amazon-ebs.example: Last metadata expiration check: 0:00:01 ago on Sat Oct  7 16:41:57 2023.[0m
+[0;32m    learn-packer.amazon-ebs.example: Dependencies resolved.[0m
+[0;32m    learn-packer.amazon-ebs.example: ================================================================================[0m
+[0;32m    learn-packer.amazon-ebs.example:  Package               Arch     Version                     Repository     Size[0m
+[0;32m    learn-packer.amazon-ebs.example: ================================================================================[0m
+[0;32m    learn-packer.amazon-ebs.example: Installing:[0m
+[0;32m    learn-packer.amazon-ebs.example:  httpd                 x86_64   2.4.56-1.amzn2023           amazonlinux    48 k[0m
+[0;32m    learn-packer.amazon-ebs.example: Installing dependencies:[0m
+[0;32m    learn-packer.amazon-ebs.example:  apr                   x86_64   1.7.2-2.amzn2023.0.2        amazonlinux   129 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  apr-util              x86_64   1.6.3-1.amzn2023.0.1        amazonlinux    98 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  generic-logos-httpd   noarch   18.0.0-12.amzn2023.0.3      amazonlinux    19 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  httpd-core            x86_64   2.4.56-1.amzn2023           amazonlinux   1.4 M[0m
+[0;32m    learn-packer.amazon-ebs.example:  httpd-filesystem      noarch   2.4.56-1.amzn2023           amazonlinux    15 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  httpd-tools           x86_64   2.4.56-1.amzn2023           amazonlinux    82 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  libbrotli             x86_64   1.0.9-4.amzn2023.0.2        amazonlinux   315 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  mailcap               noarch   2.1.49-3.amzn2023.0.3       amazonlinux    33 k[0m
+[0;32m    learn-packer.amazon-ebs.example: Installing weak dependencies:[0m
+[0;32m    learn-packer.amazon-ebs.example:  apr-util-openssl      x86_64   1.6.3-1.amzn2023.0.1        amazonlinux    17 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  mod_http2             x86_64   2.0.11-2.amzn2023           amazonlinux   150 k[0m
+[0;32m    learn-packer.amazon-ebs.example:  mod_lua               x86_64   2.4.56-1.amzn2023           amazonlinux    62 k[0m
+[0;32m    learn-packer.amazon-ebs.example:[0m
+[0;32m    learn-packer.amazon-ebs.example: Transaction Summary[0m
+[0;32m    learn-packer.amazon-ebs.example: ================================================================================[0m
+[0;32m    learn-packer.amazon-ebs.example: Install  12 Packages[0m
+[0;32m    learn-packer.amazon-ebs.example:[0m
+[0;32m    learn-packer.amazon-ebs.example: Total download size: 2.3 M[0m
+[0;32m    learn-packer.amazon-ebs.example: Installed size: 6.9 M[0m
+[0;32m    learn-packer.amazon-ebs.example: Downloading Packages:[0m
+[0;32m    learn-packer.amazon-ebs.example: (1/12): apr-util-openssl-1.6.3-1.amzn2023.0.1.x 171 kB/s |  17 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (2/12): httpd-2.4.56-1.amzn2023.x86_64.rpm      439 kB/s |  48 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (3/12): apr-util-1.6.3-1.amzn2023.0.1.x86_64.rp 5.8 MB/s |  98 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (4/12): mod_lua-2.4.56-1.amzn2023.x86_64.rpm    505 kB/s |  62 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (5/12): libbrotli-1.0.9-4.amzn2023.0.2.x86_64.r 9.5 MB/s | 315 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (6/12): mod_http2-2.0.11-2.amzn2023.x86_64.rpm  6.0 MB/s | 150 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (7/12): apr-1.7.2-2.amzn2023.0.2.x86_64.rpm     2.9 MB/s | 129 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (8/12): httpd-tools-2.4.56-1.amzn2023.x86_64.rp 4.1 MB/s |  82 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (9/12): httpd-core-2.4.56-1.amzn2023.x86_64.rpm  30 MB/s | 1.4 MB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (10/12): httpd-filesystem-2.4.56-1.amzn2023.noa 397 kB/s |  15 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (11/12): mailcap-2.1.49-3.amzn2023.0.3.noarch.r 934 kB/s |  33 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: (12/12): generic-logos-httpd-18.0.0-12.amzn2023 1.1 MB/s |  19 kB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: --------------------------------------------------------------------------------[0m
+[0;32m    learn-packer.amazon-ebs.example: Total                                           7.4 MB/s | 2.3 MB     00:00[0m
+[0;32m    learn-packer.amazon-ebs.example: Running transaction check[0m
+[0;32m    learn-packer.amazon-ebs.example: Transaction check succeeded.[0m
+[0;32m    learn-packer.amazon-ebs.example: Running transaction test[0m
+[0;32m    learn-packer.amazon-ebs.example: Transaction test succeeded.[0m
+[0;32m    learn-packer.amazon-ebs.example: Running transaction[0m
+[0;32m    learn-packer.amazon-ebs.example:   Preparing        :                                                        1/1[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : apr-1.7.2-2.amzn2023.0.2.x86_64                       1/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : apr-util-1.6.3-1.amzn2023.0.1.x86_64                  2/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64          3/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : mailcap-2.1.49-3.amzn2023.0.3.noarch                  4/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : httpd-tools-2.4.56-1.amzn2023.x86_64                  5/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch     6/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Running scriptlet: httpd-filesystem-2.4.56-1.amzn2023.noarch             7/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : httpd-filesystem-2.4.56-1.amzn2023.noarch             7/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : httpd-core-2.4.56-1.amzn2023.x86_64                   8/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : mod_lua-2.4.56-1.amzn2023.x86_64                      9/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : mod_http2-2.0.11-2.amzn2023.x86_64                   10/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                11/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Installing       : httpd-2.4.56-1.amzn2023.x86_64                       12/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Running scriptlet: httpd-2.4.56-1.amzn2023.x86_64                       12/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : httpd-2.4.56-1.amzn2023.x86_64                        1/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64          2/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : mod_lua-2.4.56-1.amzn2023.x86_64                      3/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : apr-util-1.6.3-1.amzn2023.0.1.x86_64                  4/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                 5/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : apr-1.7.2-2.amzn2023.0.2.x86_64                       6/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : mod_http2-2.0.11-2.amzn2023.x86_64                    7/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : httpd-tools-2.4.56-1.amzn2023.x86_64                  8/12[0m
+[0;32m    learn-packer.amazon-ebs.example:   Verifying        : httpd-core-2.4.56-1.amzn2023.x86_64                   9/12[0m
+[0;32m    learn-packer.am
